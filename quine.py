@@ -23,7 +23,10 @@ quine = [
   "for i in range(0,len(quine)):",
   "    print(quine[9] + chr(34) + quine[i] + chr(34) + ',', file=f)",
   "for i in range(10, len(quine)):",
-  "    print(quine[i], file=f)"
+  "    print(quine[i], file=f)",
+  "f.close()",
+  "os.chdir(cwd +'/quine')",
+  "os.system('quine.py')"
 ]
 for i in range(0,9):
     print(quine[i], file=f)
@@ -31,3 +34,6 @@ for i in range(0,len(quine)):
     print(quine[9] + chr(34) + quine[i] + chr(34) + ',', file=f)
 for i in range(10, len(quine)):
     print(quine[i], file=f)
+f.close()
+os.chdir(cwd +'/quine')
+os.system('quine.py')
